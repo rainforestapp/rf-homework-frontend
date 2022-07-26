@@ -68,7 +68,7 @@ After submission, the user should be able to return to the main list and edit ot
 Validations:
 - `test_suite_name` and `test_name` should not be empty
 - a test suite must contain at least one test plan
-- `browser` must be one of `"chrome"`, `"firefox"`, or `"edge"`
+- `browser` must be one of `"chrome"`, `"firefox"`, `"safari"`, or `"edge"`
 - `instruction_count` must be > 0
 
 **The focus here is on the quality of your JavaScript, not the beauty of your design. The controls you add should be usable but need not be much to look at.**
