@@ -4,7 +4,7 @@ At Rainforest our front-end applications often exchange JSON data with various R
 this homework we provide a sample API with a single endpoint and ask you to create a UI to display and edit test suite plans.
 
 ## Test suites API
-You'll be provided with a `/test_suites` API endpoint that returns a JSON array of items in the following format:
+You'll be provided with a `/test_suites` API endpoint (accessible from `localhost:3456`) that returns a JSON array of items in the following format:
 
 ```json
 [
@@ -44,10 +44,14 @@ Each item returned from the `/test_suites` endpoint will have the following:
 - **test_suite_name**: A string
 - **test_plans**: An array of json objects with the following format:
   - **test_name**: A string
-  - **browser**: One of `"chrome"`, `"firefox"`, or `"edge"`
+  - **browser**: One of `"chrome"`, `"firefox"`, `"safari"`, or `"edge"`
   - **instruction_count**: A number
 
 ## Task
+
+**The focus here is on the quality of your JavaScript, not the beauty of your design. We will be paying attention to your code design, organization and testing. The controls you add should be usable but need not be much to look at.**
+
+**You can use any UI frameworks of your choosing (or none). There is a tiny amount of react boilerplate code provided but you are free to delete it.**
 
 Write a single page application that retrieves and displays the list of test suite plans. The application should show the test suite name and number of test plans contained within it. Each test suite can then be expanded to show its' test plans' name, browser and instruction count. Here's a mockup of the application:
 
@@ -71,14 +75,11 @@ Validations:
 - `browser` must be one of `"chrome"`, `"firefox"`, `"safari"`, or `"edge"`
 - `instruction_count` must be > 0
 
-**The focus here is on the quality of your JavaScript, not the beauty of your design. The controls you add should be usable but need not be much to look at.**
-
-You can use any UI frameworks of your choosing (or none). There is a tiny amount of react boilerplate code provided but you are free to delete it.
 ## Additional requirements
 
 - Don't modify the given `public/index.html` file in any way. You're of course still allowed to modify the DOM through Javascript.
 - You must use Fetch API to interact with the `test_suites` endpoint. Refer to https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API for documentation.
-- You may add additional libraries as you see fit (except for the fetch restriction above), but try to keep it minimal.
+- You may add additional libraries as you see fit (except for the fetch restriction above), but try to keep it minimal. Libraries that trivialize the solution too much would make it harder to have interesting discussions in the follow up interview, which wouldn't help your application.
 - Your driver code should be written in `src/index.js`.
 
 ## Setup
@@ -89,6 +90,6 @@ You can use any UI frameworks of your choosing (or none). There is a tiny amount
 
 `yarn start` to start the development and api server
 
-The boilerplate code provided is a heavily stripped down version of a [create-react-app](https://create-react-app.dev/) starter project.
+`yarn test` to run tests
 
-The api server will be accessible at localhost port 3456
+The boilerplate code provided is a stripped down version of a [create-react-app](https://create-react-app.dev/) starter project.

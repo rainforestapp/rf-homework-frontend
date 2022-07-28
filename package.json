@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "sh start.sh",
-    "start-dev": "react-scripts start"
+    "start-dev": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
@@ -23,5 +24,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.3.0"
   }
 }
